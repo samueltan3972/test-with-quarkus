@@ -1,20 +1,20 @@
-# test-with-quarkus Project
+# Test with Quarkus
 
-This project uses Quarkus, the Supersonic Subatomic Java Framework.
+This Quarkus project is used for basic framework review with performance analysis that can be used as reference to decide on the framework to use in microservices. To know more information, visit [Performance Result](https://github.com/samueltan3972/framework-review)
 
 If you want to learn more about Quarkus, please visit its website: https://quarkus.io/ .
 
 ## Docker
 
-mvnw clean package
+`mvnw clean package`
 
-java -jar target/quarkus-app/quarkus-run.jar
+`java -jar target/quarkus-app/quarkus-run.jar`
 
-docker build -f src/main/docker/Dockerfile.jvm -t seanhao1233/test-with-quarkus .
+`docker build -f src/main/docker/Dockerfile.jvm -t seanhao1233/test-with-quarkus .`
 
-docker run -i --rm -p 8080:8080 seanhao1233/test-with-quarkus
+`docker run -i --rm -p 8080:8080 seanhao1233/test-with-quarkus`
 
-## Running the application in dev mode
+## Run in dev mode
 
 You can run your application in dev mode that enables live coding using:
 ```shell script
@@ -34,37 +34,12 @@ Be aware that it’s not an _über-jar_ as the dependencies are copied into the 
 
 The application is now runnable using `java -jar target/quarkus-app/quarkus-run.jar`.
 
-If you want to build an _über-jar_, execute the following command:
-```shell script
-./mvnw package -Dquarkus.package.type=uber-jar
-```
 
-The application, packaged as an _über-jar_, is now runnable using `java -jar target/*-runner.jar`.
+## View Result
 
-## Creating a native executable
+View the result at http://localhost:8080
+it comes with 3 API end point
+- /hello : return a simple hello world message
+- /database : perform all database CRUD operation
+- /fibonacci : compute and return first 5,000 fibonacci numbers
 
-You can create a native executable using: 
-```shell script
-./mvnw package -Pnative
-```
-
-Or, if you don't have GraalVM installed, you can run the native executable build in a container using: 
-```shell script
-./mvnw package -Pnative -Dquarkus.native.container-build=true
-```
-
-You can then execute your native executable with: `./target/test-with-quarkus-1.0.0-SNAPSHOT-runner`
-
-If you want to learn more about building native executables, please consult https://quarkus.io/guides/maven-tooling.
-
-## Related Guides
-
-- RESTEasy JAX-RS ([guide](https://quarkus.io/guides/rest-json)): REST endpoint framework implementing JAX-RS and more
-
-## Provided Code
-
-### RESTEasy JAX-RS
-
-Easily start your RESTful Web Services
-
-[Related guide section...](https://quarkus.io/guides/getting-started#the-jax-rs-resources)
