@@ -6,15 +6,15 @@ If you want to learn more about Quarkus, please visit its website: https://quark
 
 
 ## Docker
+```
+mvnw clean package
 
-`mvnw clean package`
+java -jar target/quarkus-app/quarkus-run.jar
 
-`java -jar target/quarkus-app/quarkus-run.jar`
+docker build -f src/main/docker/Dockerfile.jvm -t seanhao1233/test-with-quarkus .
 
-`docker build -f src/main/docker/Dockerfile.jvm -t seanhao1233/test-with-quarkus .`
-
-`docker run -i --rm -p 8080:8080 seanhao1233/test-with-quarkus`
-
+docker run -i --rm -p 8080:8080 seanhao1233/test-with-quarkus
+```
 
 ## Run in dev mode
 
