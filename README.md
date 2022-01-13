@@ -4,6 +4,8 @@ This Quarkus project is used for basic framework review with performance analysi
 
 If you want to learn more about Quarkus, please visit its website: https://quarkus.io/ .
 
+Make sure JDK 11 is installed
+
 ## Run in dev mode
 
 You can run your application in dev mode that enables live coding using:
