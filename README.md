@@ -4,18 +4,6 @@ This Quarkus project is used for basic framework review with performance analysi
 
 If you want to learn more about Quarkus, please visit its website: https://quarkus.io/ .
 
-
-## Docker
-```
-mvnw clean package
-
-java -jar target/quarkus-app/quarkus-run.jar
-
-docker build -f src/main/docker/Dockerfile.jvm -t seanhao1233/test-with-quarkus .
-
-docker run -i --rm -p 8080:8080 seanhao1233/test-with-quarkus
-```
-
 ## Run in dev mode
 
 You can run your application in dev mode that enables live coding using:
@@ -33,6 +21,18 @@ java -jar target/quarkus-app/quarkus-run.jar
 ```
 It produces the `quarkus-run.jar` file in the `target/quarkus-app/` directory.
 Be aware that it’s not an _über-jar_ as the dependencies are copied into the `target/quarkus-app/lib/` directory.
+
+
+## Docker
+```
+mvnw clean package
+
+java -jar target/quarkus-app/quarkus-run.jar
+
+docker build -f src/main/docker/Dockerfile.jvm -t seanhao1233/test-with-quarkus .
+
+docker run -i --rm -p 8080:8080 seanhao1233/test-with-quarkus
+```
 
 
 ## View Result
